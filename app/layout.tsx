@@ -7,7 +7,7 @@ export const metadata = {
   description: "Explore planets and moons"
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className="pt-20 bg-gradient-to-br from-[#0b0d14] via-[#111827] to-[#1e1b4b]"> 
