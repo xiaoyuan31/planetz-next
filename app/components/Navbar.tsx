@@ -8,7 +8,7 @@ export default function Navbar() {
 
   const linkClass = (path: string ) =>
     `px-4 py-2 rounded-md transition ${
-      pathname === path
+      pathname == path
         ? "bg-white/20 text-white shadow-lg"
         : "text-white/70 hover:text-white hover:bg-white/10"
     }`;
