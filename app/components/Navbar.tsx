@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 export default function Navbar() {
   const pathname = usePathname();
 
-  const linkClass = (path) =>
+  const linkClass = (path: any ) =>
     `px-4 py-2 rounded-md transition ${
       pathname === path
         ? "bg-white/20 text-white shadow-lg"
