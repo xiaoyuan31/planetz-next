@@ -27,3 +27,13 @@ body {
 }
 
 
+.stars {
+  background: url("/stars.png") repeat;
+  animation: moveStars 120s linear infinite;
+}
+
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: 10000px 10000px; }
+}
+

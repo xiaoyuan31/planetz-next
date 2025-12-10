@@ -10,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="pt-20"> 
+      <body className="pt-20 bg-gradient-to-br from-[#0b0d14] via-[#111827] to-[#1e1b4b]"> 
         <Navbar />
         <main className="max-w-4xl mx-auto px-6">{children}</main>
         <Footer />

@@ -6,11 +6,11 @@ export default async function Home() {
   
 
   return (
-    <main className="p-6 text-center justify-center flex flex-col items-center">
+   <main className="p-6 min-h-screen text-center  backdrop-blur-xl">
       <img
         src="/logo.png"
         alt="Planetz Logo"
-        className="w-32 mb-6 drop-shadow-[0_0_25px_rgba(255,255,255,0.3)]"
+        className="w-32 mb-6 bject-contain mx-auto drop-shadow-[0_0_25px_rgba(255,255,255,0.3)]"
       />
 
     <h1 className="text-4xl font-extrabold mb-2 bg-clip-text text-transparent
