@@ -37,3 +37,11 @@ body {
   to { background-position: 10000px 10000px; }
 }
 
+/* globals.css */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
