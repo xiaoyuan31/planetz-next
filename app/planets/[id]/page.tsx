@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import { getCategoryByID, getMoonListByPlanet, getPlanetByID } from "@/lib/api";
+import { getCategoryByID, getFactsByPlanet, getMoonListByPlanet, getPlanetByID } from "@/lib/api";
 
 interface Props {
   params: { id: string } | Promise<{ id: string }>;
@@ -15,6 +15,8 @@ export default async function PlanetDetailPage({ params }: Props) {
   const category = await getCategoryByID(planet.categoryid);
 
   const moonList = await getMoonListByPlanet(id);
+
+  const facts = await getFactsByPlanet(id);
 
   if (!planet) {
     return <div className="text-center mt-10">Planet not found or API error!</div>;
@@ -81,6 +83,22 @@ export default async function PlanetDetailPage({ params }: Props) {
           </div>
         </>
       )}
+
+
+       <h1 className="text-4xl mt-10 font-bold mb-4">Interesting Facts</h1>
+      <div className="flex gap-4 overflow-x-auto py-4 scrollbar-hide scroll-smooth snap-x snap-mandatory">
+      {facts.map((fact: any) => (
+        <div key={fact.id} className="flex-none w-40 snap-start ...">
+          <div className="flex-none bg-gray-900 rounded-lg p-3 w-40 text-white hover:bg-gray-800 transition">
+            <p className="text-sm">{fact.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+
+      
+
     </div>
   );
 }

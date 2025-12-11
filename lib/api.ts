@@ -49,3 +49,11 @@ export async function getMoonListByPlanet(id: string) {
   });
   return res.json();
 }
+
+
+export async function getFactsByPlanet(id: string) {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/facts/planet/${id}`, {
+    cache: "no-store",
+  });
+  return res.json();
+}
